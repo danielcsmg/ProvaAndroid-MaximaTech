@@ -14,10 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.SplashScreenMaxima" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/splash_gradient_start</item>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@drawable/gradient_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/maxima_logotipo</item>
-        <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/Theme.ProvaAndroid</item>
     </style>
 </resources>

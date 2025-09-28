@@ -13,4 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/maxima_logotipo</item>
+        <item name="windowSplashScreenBackground">@drawable/gradient_background</item>
+        <item name="postSplashScreenTheme">@style/Theme.ProvaAndroid</item>
+    </style>
 </resources>
