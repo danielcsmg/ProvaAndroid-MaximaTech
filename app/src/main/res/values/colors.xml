@@ -7,4 +7,54 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- General Colors -->
+    <color name="screen_background">#FFFFFF</color>
+    <color name="toolbar_background">#186096</color>
+    <color name="status_bar_background">#00386C</color>
+    <color name="card_screen_background">#F1F1F1</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="bottom_navigation_background">#186096</color>
+    <color name="bottom_navigation_active_item">#FFFFFF</color>
+    <color name="bottom_navigation_inactive_item">#95B6CF</color>
+
+    <!-- Splash Screen Colors -->
+    <color name="splash_gradient_start">#186096</color>
+    <color name="splash_gradient_end">#053F6A</color>
+
+    <!-- Customer Data Colors -->
+    <color name="customer_data_text">#000000</color>
+    <color name="customer_data_label">#95989A</color>
+    <color name="company_name_text">#606060</color>
+    <color name="phone_button">#186096</color>
+    <color name="email_button">#C1392B</color>
+    <color name="check_status_button">#638735</color>
+
+    <!-- Order History Colors -->
+    <color name="order_history_text">#000000</color>
+    <color name="order_history_label">#95989A</color>
+
+    <!-- Order Status Colors -->
+    <color name="status_processing_fv">#95989A</color>
+    <color name="status_rejected_erp">#FF9900</color>
+    <color name="status_pending">#606060</color>
+    <color name="status_blocked">#3557AA</color>
+    <color name="status_released">#186096</color>
+    <color name="status_assembled">#7FAA33</color>
+    <color name="status_invoiced">#64863B</color>
+    <color name="status_canceled">#E40613</color>
+    <color name="status_budget">#2D3E4E</color>
+
+    <!-- Criticality Types Colors -->
+    <color name="criticality_waiting_erp">#757575</color>
+    <color name="criticality_success">#64863B</color>
+    <color name="criticality_partial_failure">#FF9900</color>
+    <color name="criticality_total_failure">#E40613</color>
+
+    <!-- Legends Colors -->
+    <color name="legend_order_cut">#FF9900</color>
+    <color name="legend_order_missing">#BF595F</color>
+    <color name="legend_order_canceled_erp">#E40613</color>
+    <color name="legend_order_return">#186096</color>
+    <color name="legend_order_telemarketing">#64863B</color>
 </resources>
