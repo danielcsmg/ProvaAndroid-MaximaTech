@@ -12,7 +12,7 @@ val maximaTechModules = module {
 }
 
 private fun Module.viewModels() {
-
+    viewModel { ClientInformationViewModel() }
 }
 
 private fun Module.domain() {
