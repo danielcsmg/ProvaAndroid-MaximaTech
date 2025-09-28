@@ -45,4 +45,12 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+
+    // DI
+    implementation libs.koin.android
+    implementation libs.koin.androidx.viewmodel
+
+    // Tests
+    testImplementation libs.koin.test
+    testImplementation libs.koin.test.junit4
 }
