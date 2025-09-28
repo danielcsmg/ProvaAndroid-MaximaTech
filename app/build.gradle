@@ -47,8 +47,9 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
 
     // DI
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.koin.core)
     implementation libs.koin.android
-    implementation libs.koin.androidx.viewmodel
 
     // Tests
     testImplementation libs.koin.test
