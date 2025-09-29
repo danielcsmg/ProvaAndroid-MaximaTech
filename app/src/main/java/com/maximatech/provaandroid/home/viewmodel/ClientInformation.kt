@@ -28,10 +28,29 @@ internal data class ClientInformation(
     )
 }
 
-internal data class ClientInformationData(
-    val name: String,
+data class ClientInformationData(
+    val id: Int,
+    val code: String,
+    val corporateName: String,
+    val tradeName: String,
+    val cnpj: String,
+    val businessActivity: String,
+    val address: String,
+    val status: String,
+    val contacts: List<ContactData>
 )
 
+data class ContactData(
+    val name: String,
+    val phone: String?,
+    val cellPhone: String?,
+    val spouseName: String?,
+    val type: String,
+    val team: String?,
+    val email: String,
+    val birthDate: String,
+    val spouseBirthDate: String?
+)
 internal data class ClientError(
     val message: String,
 )

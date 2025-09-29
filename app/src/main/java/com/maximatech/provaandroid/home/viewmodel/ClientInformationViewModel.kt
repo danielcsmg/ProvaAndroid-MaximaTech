@@ -4,22 +4,32 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.delay
+import com.maximatech.provaandroid.data.remote.ApiService
+import com.maximatech.provaandroid.data.remote.entity.ClientResponse
+import com.maximatech.provaandroid.toData
 import kotlinx.coroutines.launch
 
-internal class ClientInformationViewModel : ViewModel() {
+internal class ClientInformationViewModel(
+    private val apiService: ApiService,
+) : ViewModel() {
     private val _clientInformation = MutableLiveData<ClientInformation>()
     val clientInformation: LiveData<ClientInformation> = _clientInformation
 
     fun fetchClientInformation() {
         _clientInformation.value = ClientInformation()
         viewModelScope.launch {
-            delay(2000)
-            _clientInformation.value = ClientInformation(
-                ClientInformationData(
-                    name = "Daniel"
-                )
-            )
+            getClientInformation()?.let {
+                _clientInformation.value = it.toData()
+            }
+            _clientInformation.value = ClientInformation(error = ClientError(""))
+        }
+    }
+
+    private suspend fun getClientInformation(): ClientResponse? {
+        return try {
+            apiService.getClientInformation()
+        } catch (e: Exception) {
+            null
         }
     }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.maximatech.provaandroid.databinding.ActivityClientInformationBinding
+import com.maximatech.provaandroid.home.viewmodel.ClientInformation
 import com.maximatech.provaandroid.home.viewmodel.ClientInformationState
 import com.maximatech.provaandroid.home.viewmodel.ClientInformationViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -27,8 +28,20 @@ class ClientInformationActivity : AppCompatActivity() {
 
     private fun setupObservers() {
         viewModel.clientInformation.observe(this) {
-            setupLoading(it.state)
+            bindView(it)
         }
+    }
+
+    private fun ClientInformationActivity.bindView(data: ClientInformation) {
+        when (data.state) {
+            is ClientInformationState.Success -> {
+                binding.tvClientName.text = data.data?.corporateName
+            }
+
+            ClientInformationState.Error -> {}
+            ClientInformationState.Loading -> {}
+        }
+        setupLoading(data.state)
     }
 
     private fun setupLoading(state: ClientInformationState) = binding.progressBar.apply {
