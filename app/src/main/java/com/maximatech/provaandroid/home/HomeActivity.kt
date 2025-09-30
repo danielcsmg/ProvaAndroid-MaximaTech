@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.maximatech.provaandroid.R
 import com.maximatech.provaandroid.databinding.ActivityHomeBinding
-import com.maximatech.provaandroid.order.OrderFragment
+import com.maximatech.provaandroid.presentation.order.OrderFragment
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding

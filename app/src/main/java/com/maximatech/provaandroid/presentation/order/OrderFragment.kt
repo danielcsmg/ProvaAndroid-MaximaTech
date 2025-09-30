@@ -1,4 +1,4 @@
-package com.maximatech.provaandroid.order
+package com.maximatech.provaandroid.presentation.order
 
 import android.os.Bundle
 import android.view.LayoutInflater
