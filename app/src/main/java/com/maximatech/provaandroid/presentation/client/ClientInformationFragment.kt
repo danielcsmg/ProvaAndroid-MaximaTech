@@ -7,16 +7,16 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.maximatech.provaandroid.databinding.FragmentClientInformationBinding
 import com.maximatech.provaandroid.presentation.client.adapter.ClientInformationAdapter
 import com.maximatech.provaandroid.presentation.client.adapter.model.ClientInformationItem
 import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformation
 import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformationState
 import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformationViewModel
-import com.maximatech.provaandroid.databinding.FragmentClientInformationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ClientInformationFragment : Fragment() {
-    private val binding by lazy { FragmentClientInformationBinding.inflate(layoutInflater) }
+    private lateinit var binding: FragmentClientInformationBinding
 
     private lateinit var adapter: ClientInformationAdapter
 
@@ -27,8 +27,15 @@ class ClientInformationFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        binding = FragmentClientInformationBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupRecyclerView()
+        setupObservers()
+        viewModel.fetchClientInformation()
     }
 
     fun setupRecyclerView() {
@@ -37,20 +44,13 @@ class ClientInformationFragment : Fragment() {
         binding.clientList.adapter = adapter
     }
 
-    override fun onStart() {
-        super.onStart()
-        setupRecyclerView()
-        setupObservers()
-        viewModel.fetchClientInformation()
-    }
-
     private fun setupObservers() {
-        viewModel.clientInformation.observe(this) {
+        viewModel.clientInformation.observe(viewLifecycleOwner) {
             bindView(it)
         }
     }
 
-    private fun ClientInformationFragment.bindView(data: ClientInformation) {
+    private fun bindView(data: ClientInformation) {
         when (data.state) {
             is ClientInformationState.Success -> {
                 data.data?.let { client ->
