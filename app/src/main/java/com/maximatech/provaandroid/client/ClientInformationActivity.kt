@@ -1,35 +1,45 @@
 package com.maximatech.provaandroid.client
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.maximatech.provaandroid.databinding.ActivityClientInformationBinding
 import com.maximatech.provaandroid.client.adapter.ClientInformationAdapter
 import com.maximatech.provaandroid.client.model.ClientInformationItem
 import com.maximatech.provaandroid.client.viewmodel.ClientInformation
 import com.maximatech.provaandroid.client.viewmodel.ClientInformationState
 import com.maximatech.provaandroid.client.viewmodel.ClientInformationViewModel
+import com.maximatech.provaandroid.databinding.FragmentClientInformationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ClientInformationActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityClientInformationBinding
+class ClientInformationActivity : Fragment() {
+    private val binding by lazy { FragmentClientInformationBinding.inflate(layoutInflater) }
 
     private lateinit var adapter: ClientInformationAdapter
 
     private val viewModel: ClientInformationViewModel by viewModel()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityClientInformationBinding.inflate(layoutInflater)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        return binding.root
+    }
+
+    fun setupRecyclerView() {
         adapter = ClientInformationAdapter()
-        binding.clientList.layoutManager = LinearLayoutManager(this)
+        binding.clientList.layoutManager = LinearLayoutManager(context)
         binding.clientList.adapter = adapter
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
     }
 
     override fun onStart() {
         super.onStart()
+        setupRecyclerView()
         setupObservers()
         viewModel.fetchClientInformation()
     }
