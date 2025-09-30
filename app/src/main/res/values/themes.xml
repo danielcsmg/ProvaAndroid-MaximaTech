@@ -16,7 +16,7 @@
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@drawable/gradient_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/maxima_logotipo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/maxima_logotipo_splash</item>
         <item name="postSplashScreenTheme">@style/Theme.ProvaAndroid</item>
     </style>
 </resources>
