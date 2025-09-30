@@ -1,4 +1,4 @@
-package com.maximatech.provaandroid.client.viewmodel
+package com.maximatech.provaandroid.presentation.client.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

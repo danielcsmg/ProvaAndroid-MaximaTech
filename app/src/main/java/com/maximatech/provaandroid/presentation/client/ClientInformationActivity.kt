@@ -1,4 +1,4 @@
-package com.maximatech.provaandroid.client
+package com.maximatech.provaandroid.presentation.client
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.maximatech.provaandroid.client.adapter.ClientInformationAdapter
-import com.maximatech.provaandroid.client.model.ClientInformationItem
-import com.maximatech.provaandroid.client.viewmodel.ClientInformation
-import com.maximatech.provaandroid.client.viewmodel.ClientInformationState
-import com.maximatech.provaandroid.client.viewmodel.ClientInformationViewModel
+import com.maximatech.provaandroid.presentation.client.adapter.ClientInformationAdapter
+import com.maximatech.provaandroid.presentation.client.adapter.model.ClientInformationItem
+import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformation
+import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformationState
+import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformationViewModel
 import com.maximatech.provaandroid.databinding.FragmentClientInformationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

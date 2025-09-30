@@ -16,7 +16,7 @@
         android:theme="@style/Theme.ProvaAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".client.ClientInformationActivity"
+            android:name=".presentation.client.ClientInformationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

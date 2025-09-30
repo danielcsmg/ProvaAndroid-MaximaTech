@@ -1,4 +1,4 @@
-package com.maximatech.provaandroid.client.model
+package com.maximatech.provaandroid.presentation.client.adapter.model
 
 internal data class ClientInformationItem(
     val title: String,

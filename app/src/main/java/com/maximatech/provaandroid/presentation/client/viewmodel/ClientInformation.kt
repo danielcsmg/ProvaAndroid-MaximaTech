@@ -1,4 +1,4 @@
-package com.maximatech.provaandroid.client.viewmodel
+package com.maximatech.provaandroid.presentation.client.viewmodel
 
 internal data class ClientInformation(
     val data: ClientInformationData?,
