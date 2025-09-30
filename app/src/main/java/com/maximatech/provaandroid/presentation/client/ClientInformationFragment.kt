@@ -15,7 +15,7 @@ import com.maximatech.provaandroid.presentation.client.viewmodel.ClientInformati
 import com.maximatech.provaandroid.databinding.FragmentClientInformationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ClientInformationActivity : Fragment() {
+class ClientInformationFragment : Fragment() {
     private val binding by lazy { FragmentClientInformationBinding.inflate(layoutInflater) }
 
     private lateinit var adapter: ClientInformationAdapter
@@ -50,7 +50,7 @@ class ClientInformationActivity : Fragment() {
         }
     }
 
-    private fun ClientInformationActivity.bindView(data: ClientInformation) {
+    private fun ClientInformationFragment.bindView(data: ClientInformation) {
         when (data.state) {
             is ClientInformationState.Success -> {
                 data.data?.let { client ->
