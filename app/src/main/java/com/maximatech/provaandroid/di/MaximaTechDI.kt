@@ -5,7 +5,7 @@ import com.maximatech.provaandroid.core.provideConverterFactory
 import com.maximatech.provaandroid.core.provideHttpClient
 import com.maximatech.provaandroid.core.provideRetrofit
 import com.maximatech.provaandroid.core.provideService
-import com.maximatech.provaandroid.home.viewmodel.ClientInformationViewModel
+import com.maximatech.provaandroid.client.viewmodel.ClientInformationViewModel
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module

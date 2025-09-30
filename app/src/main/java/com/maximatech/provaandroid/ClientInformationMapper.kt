@@ -2,9 +2,9 @@ package com.maximatech.provaandroid
 
 import com.maximatech.provaandroid.data.remote.entity.ClientResponse
 import com.maximatech.provaandroid.data.remote.entity.ContactResponse
-import com.maximatech.provaandroid.home.viewmodel.ClientInformation
-import com.maximatech.provaandroid.home.viewmodel.ClientInformationData
-import com.maximatech.provaandroid.home.viewmodel.ContactData
+import com.maximatech.provaandroid.client.viewmodel.ClientInformation
+import com.maximatech.provaandroid.client.viewmodel.ClientInformationData
+import com.maximatech.provaandroid.client.viewmodel.ContactData
 
 internal fun ClientResponse.toData() = ClientInformation(
     data = ClientInformationData(

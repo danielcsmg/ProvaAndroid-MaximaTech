@@ -1,10 +1,10 @@
-package com.maximatech.provaandroid.home.adapter
+package com.maximatech.provaandroid.client.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.maximatech.provaandroid.databinding.ClientCardItemBinding
-import com.maximatech.provaandroid.home.model.ClientInformationItem
+import com.maximatech.provaandroid.client.model.ClientInformationItem
 
 internal class ClientInformationAdapter(
     private val items: MutableList<ClientInformationItem> = mutableListOf()

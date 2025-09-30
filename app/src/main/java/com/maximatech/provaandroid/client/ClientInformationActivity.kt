@@ -1,15 +1,15 @@
-package com.maximatech.provaandroid.home
+package com.maximatech.provaandroid.client
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.maximatech.provaandroid.databinding.ActivityClientInformationBinding
-import com.maximatech.provaandroid.home.adapter.ClientInformationAdapter
-import com.maximatech.provaandroid.home.model.ClientInformationItem
-import com.maximatech.provaandroid.home.viewmodel.ClientInformation
-import com.maximatech.provaandroid.home.viewmodel.ClientInformationState
-import com.maximatech.provaandroid.home.viewmodel.ClientInformationViewModel
+import com.maximatech.provaandroid.client.adapter.ClientInformationAdapter
+import com.maximatech.provaandroid.client.model.ClientInformationItem
+import com.maximatech.provaandroid.client.viewmodel.ClientInformation
+import com.maximatech.provaandroid.client.viewmodel.ClientInformationState
+import com.maximatech.provaandroid.client.viewmodel.ClientInformationViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ClientInformationActivity : AppCompatActivity() {
