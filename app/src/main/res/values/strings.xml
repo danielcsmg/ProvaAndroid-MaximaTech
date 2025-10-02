@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">ProvaAndroid</string>
+    <string name="client_data_card_title">Dados do cliente</string>
+    <string name="cpf_item_label">CPF:</string>
+    <string name="cnpj_item_label">CNPJ:</string>
+    <string name="line_business_item_label">Ramo de atividade:</string>
+    <string name="address_item_label">Endereço:</string>
+    <string name="phone_item_label">Telefone:</string>
+    <string name="cellphone_item_label">Celular:</string>
+    <string name="couple_item_label">Cônjuge:</string>
+    <string name="connection_type_item_label">Tipo:</string>
+    <string name="team_item_label">Time:</string>
+    <string name="mail_item_label">E-mail:</string>
+    <string name="birth_date_item_label">Data Nasc.:</string>
+    <string name="couple_birth_date_item_label">Data Nasc. Cônjuge:</string>
+    <string name="contacts_title_label">Contatos</string>
+    <string name="verify_client_status_button_label">Verificar status do cliente</string>
+    <string name="max_app_toolbar_label">MaxApp</string>
+    <string name="subtitles">Legendas</string>
+    <string name="users_item_label">Usuários</string>
+    <string name="hist_orders_item_label">Hist. Pedidos</string>
 </resources>

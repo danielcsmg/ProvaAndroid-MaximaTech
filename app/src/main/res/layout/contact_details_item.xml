@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_client_subtitle_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textColor="@color/customer_data_text"
+        android:textStyle="bold"
+        tools:text="DROGARIA CAMPESTRE" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/phone_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/phone_item_label"
+                tools:detailSubtitle="Exemplo"
+                app:detailIcon="@drawable/ic_maxima_telefone" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/cellphone_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/cellphone_item_label"
+                tools:detailSubtitle="Exemplo"
+                app:detailIcon="@drawable/ic_maxima_telefone" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/couple_name_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/couple_item_label"
+                tools:detailSubtitle="Exemplo" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/connection_type_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/connection_type_item_label"
+                tools:detailSubtitle="Exemplo" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/team_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/team_item_label"
+                tools:detailSubtitle="Exemplo" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/mail_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/mail_item_label"
+                tools:detailSubtitle="Exemplo"
+                app:detailIcon="@drawable/ic_maxima_email" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/birthday_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/birth_date_item_label"
+                tools:detailSubtitle="Exemplo" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/couple_birthday_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/couple_birth_date_item_label"
+                tools:detailSubtitle="Exemplo" />
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/second_team_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:detailTitle="@string/team_item_label"
+                tools:detailSubtitle="Exemplo" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

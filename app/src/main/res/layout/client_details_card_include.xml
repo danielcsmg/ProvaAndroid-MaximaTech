@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:text="@string/client_data_card_title"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginHorizontal="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/customer_data_label"/>
+
+            <TextView
+                android:id="@+id/tv_client_title_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                tools:text="Cliente 1"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_client_subtitle_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_client_title_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                tools:text="DROGARIA CAMPESTRE"
+                android:textColor="@color/customer_data_label"/>
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/cpf_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_client_subtitle_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:detailTitle="@string/cpf_item_label"
+                tools:detailSubtitle="Exemplo"/>
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/cnpj_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cpf_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:detailTitle="@string/cnpj_item_label"
+                tools:detailSubtitle="Exemplo"/>
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/business_line_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cnpj_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:detailTitle="@string/line_business_item_label"
+                tools:detailSubtitle="Exemplo"/>
+
+            <com.maximatech.provaandroid.presentation.views.DetailItemView
+                android:id="@+id/address_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/business_line_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:detailTitle="@string/address_item_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp"
+                tools:detailSubtitle="Exemplo"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
