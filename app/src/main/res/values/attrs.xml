@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemCardDetail">
+        <attr name="detailTitle" format="string" />
+        <attr name="detailSubtitle" format="string" />
+        <attr name="detailIcon" format="reference" />
+    </declare-styleable>
+</resources>
