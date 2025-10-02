@@ -25,5 +25,4 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/client_card_item"/>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
