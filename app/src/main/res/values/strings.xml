@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProvaAndroid</string>
+    <string name="max_app_toolbar_label">MaxApp</string>
+    <string name="subtitles">Legendas</string>
+    <string name="users_item_label">Usuários</string>
+    <string name="hist_orders_item_label">Hist. Pedidos</string>
 </resources>
