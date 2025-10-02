@@ -1,5 +1,7 @@
 package com.maximatech.provaandroid.presentation.client.viewmodel
 
+import com.maximatech.provaandroid.utils.formatIntegerWithThousandSeparator
+
 internal data class ClientInformation(
     val data: ClientInformationData?,
     val error: ClientError?,
@@ -26,6 +28,12 @@ internal data class ClientInformation(
         error = null,
         state = ClientInformationState.Loading
     )
+
+    fun getFormatedClientNameInfo(): String {
+        return data?.run {
+            "${id.formatIntegerWithThousandSeparator()} - $corporateName"
+        }.orEmpty()
+    }
 }
 
 data class ClientInformationData(
@@ -38,7 +46,11 @@ data class ClientInformationData(
     val address: String,
     val status: String,
     val contacts: List<ContactData>
-)
+) {
+    fun getFormatedId(): String {
+        return id.formatIntegerWithThousandSeparator()
+    }
+}
 
 data class ContactData(
     val name: String,
